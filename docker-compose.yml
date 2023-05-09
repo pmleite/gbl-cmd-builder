@@ -14,7 +14,7 @@ services:
         environment:
             - POSTGRES_USER=postgres
             - POSTGRES_PASS=postgres
-        restart: always
+        #restart: always
         mem_limit: 1000m
         mem_reservation: 300m
     cmdbuild_app:
@@ -27,7 +27,7 @@ services:
            - cmdbuild_db
         ports:
             - 80:8080
-        restart: always  
+        #restart: always  
         volumes:
             - cmdbuild-tomcat:/usr/local/tomcat
         environment:
